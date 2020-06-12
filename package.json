@@ -1,6 +1,6 @@
 {
   "name": "turtle-ts",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Turtle graphics engine in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/daniazar/turtlets/issues"
   },
-  "homepage": "https://github.com/daniazar/turtlets#readme"
+  "homepage": "https://github.com/daniazar/turtlets#readme",
+  "dependencies": {
+    "eslint": "^7.2.0"
+  }
 }
