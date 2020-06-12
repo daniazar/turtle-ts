@@ -1,0 +1,25 @@
+{
+  "name": "turtle-ts",
+  "version": "1.0.0",
+  "description": "Turtle graphics engine in typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniazar/turtlets.git"
+  },
+  "keywords": [
+    "turtle",
+    "engine",
+    "typescript"
+  ],
+  "author": "Daniel Azar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daniazar/turtlets/issues"
+  },
+  "homepage": "https://github.com/daniazar/turtlets#readme"
+}
