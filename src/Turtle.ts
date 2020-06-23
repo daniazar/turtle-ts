@@ -80,4 +80,12 @@ export class Turtle {
     penDown() {
         this._penDown = true;
     }
+
+    public get position(): Point {
+        return this._position;
+    }
+    public set position(value: Point) {
+        this._position = value;
+    }
+
 }

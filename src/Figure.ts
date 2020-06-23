@@ -1,3 +1,4 @@
+import { Point } from "./Point";
 import { Turtle } from "./Turtle";
 
 export class Figure {
@@ -18,6 +19,30 @@ export class Figure {
         this._turtle.backward(7);
         this._turtle.left(150);
     };
+
+    circle(radius, extent, steps) {
+        if (!extent) {
+            extent = 360;
+        }
+        extent = extent * (Math.PI * 180);
+
+        if (!steps) {
+            steps = Math.round(Math.abs(radius * extent * 8)) | 0;
+            steps = Math.max(steps, 4);
+        }
+        const cx = this._turtle.position.x + radius * Math.cos(this._turtle.angle() + Math.PI / 2);
+        const cy = this._turtle.position.y + radius * Math.sin(this._turtle.angle() + Math.PI / 2);
+        const a1 = Math.atan2(this._turtle.position.y - cy, this._turtle.position.x - cx);
+        const a2 = radius >= 0 ? a1 + extent : a1 - extent;
+        for (let i = 0; i < steps; i++) {
+            const p = i / (steps - 1);
+            const a = a1 + (a2 - a1) * p;
+            const x = cx + Math.abs(radius) * Math.cos(a);
+            const y = cy + Math.abs(radius) * Math.sin(a);
+            this._turtle.setPosition(new Point(x, y));
+        }
+    }
+
 
 
     hexagon = function (length) {
